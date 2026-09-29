@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import API from "../config/api";
 import styles from "../styles/adminStyles";
@@ -236,7 +237,6 @@ function AdminEvents() {
                 <th style={tableHeaderStyle}>Title</th>
                 <th style={tableHeaderStyle}>Ticket Price</th>
                 <th style={tableHeaderStyle}>Active</th>
-                <th style={tableHeaderStyle}>Created At</th>
                 <th style={tableHeaderStyle}>Action</th>
               </tr>
             </thead>
@@ -262,12 +262,6 @@ function AdminEvents() {
 
                   <td style={tableCellStyle}>
                     {event.isActive ? "Active" : "Inactive"}
-                  </td>
-
-                  <td style={tableCellStyle}>
-                    {event.createdAt
-                      ? new Date(event.createdAt).toLocaleString()
-                      : "-"}
                   </td>
 
                   <td style={tableCellStyle}>
